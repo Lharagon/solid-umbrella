@@ -1,0 +1,25 @@
+<header>
+  <h1>{{poll.question}}</h1>
+  <a [routerLink] ="['/dashboard']">To the Polls</a>
+
+</header>
+<main>
+  <table>
+    <thead>
+      <tr>
+        <th>Option</th>
+        <th>Current Count of Votes</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let option of poll.options'>
+        <td>{{option.option}}</td>
+        <td>{{option.vote}}</td>
+        <td>{{poll.createdAt | date: 'medium'}}</td>
+        <td><button (click)='vote(option._id)'>Vote</button></td>
+      </tr>
+    </tbody>
+  </table>
+  {{OptNum}}
+</main>

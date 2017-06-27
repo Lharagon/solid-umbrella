@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+label {
+  display: block;
+}
+
+h1, h2 {
+  display: inline;
+}
+
+a {
+  float: right;
+  margin-right: 20px;
+}
